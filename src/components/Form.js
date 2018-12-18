@@ -10,7 +10,7 @@ class Form extends Component {
   handleSubmit = (e)=>{
     e.preventDefault()
       const data = JSON.stringify({...this.state})
-      fetch('localhost:4000',{
+      fetch('http://localhost:4000',{
         method: 'POST',
         body: data,
         headers: {
@@ -25,16 +25,16 @@ class Form extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" onChange={e => this.setState({emailAddress: e.target.value})}/>
-            <small id="emailHelp" class="form-text text-muted"></small>
+          <div className="form-group">
+            <label htmlFor="exampleInputEmail1">Email address</label>
+            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" onChange={e => this.setState({emailAddress: e.target.value})}/>
+            <small id="emailHelp" className="form-text text-muted"></small>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" onChange={e => this.setState({password: e.target.value})}/>
+          <div className="form-group">
+            <label htmlFor="exampleInputPassword1">Password</label>
+            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" onChange={e => this.setState({password: e.target.value})}/>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>
     );
