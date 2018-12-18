@@ -14,6 +14,7 @@ function Routing() {
         <Route path="/Home" exact component={Home} />
         <Route path="/Form" component={Form} />
         <Route path="/People" component={People} />
+        <Route path="/auth" component={Auth} />
         </Switch>
     </Router>
     );

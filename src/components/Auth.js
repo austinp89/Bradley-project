@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
+import './Auth.css'
 
 class Auth extends Component {
 
@@ -10,13 +10,17 @@ class Auth extends Component {
 
     state = {
       email:'',
-      password:''
+      password:'',
     }
 
   render() {
+    console.log(this)
+    console.log(this.state)
     return (
-        <Form inline onSubmit={this.handleSubmit}>
-        <h1>😍Authentication😍</h1>
+    
+    <center>
+      <Form inline onSubmit={this.handleSubmit}>  
+        <h1>😍😍😍Authentication😍😍😍</h1>
         <FormGroup>
           <Label for="exampleEmail" hidden>Email</Label>
           <Input type="email" name="email" id="exampleEmail" placeholder="Email" onChange={e => this.setState({email: e.target.value})}/>
@@ -29,6 +33,7 @@ class Auth extends Component {
         {' '}
         <Button type='submit'>Submit</Button>
       </Form>
+      </center>
     );
   }
 }
